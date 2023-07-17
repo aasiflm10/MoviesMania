@@ -7,9 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.example.moviesmania.Database.DB.MyDbHandler;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -95,14 +97,13 @@ public class MovieAdapter extends BaseAdapter {
             }
         });
 
+
         return convertView;
     }
 
     public void setMovies(ArrayList<Movie> movieList) {
         this.list = movieList;
     }
-
-
 
 
 }

@@ -14,4 +14,10 @@
         android:orderInCategory="1"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/saved_movies"
+        android:title="Favourites"
+        android:orderInCategory="1"
+        app:showAsAction="never"/>
+
 </menu>

@@ -2,4 +2,8 @@
     <string name="app_name">MoviesMania</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mark_as_favourite">Mark as favourite</string>
+    <string name="remove_from_favourite">Remove from favourite</string>
+    <string name="watch_trialer">Watch Trialer</string>
+    <string name="movie_name">Movie Name</string>
 </resources>

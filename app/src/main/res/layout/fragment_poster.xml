@@ -6,9 +6,12 @@
     tools:context=".DetailsFragment.PosterFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/movie_poster"
+        android:layout_width="140dp"
+        android:layout_height="210dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop" />
 
 </FrameLayout>

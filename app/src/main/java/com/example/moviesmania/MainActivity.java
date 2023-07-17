@@ -13,6 +13,7 @@ import android.widget.GridView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.moviesmania.Database.DB.MyDbHandler;
 import com.example.moviesmania.utilities.NetworkUtils;
 
 import java.io.IOException;
@@ -89,6 +90,9 @@ public class MainActivity extends AppCompatActivity {
         mProgressBar = findViewById(R.id.progress_bar);
         mProgressBar.setVisibility(View.INVISIBLE);
 
+        MyDbHandler db = new MyDbHandler(MainActivity.this);
+
+
         mGridView = findViewById(R.id.gridView);
         mMoviesAdapter = new MovieAdapter(this, new ArrayList<>());
         mGridView.setAdapter(mMoviesAdapter);
@@ -115,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
             refreshList(mPopularList);
             return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }
