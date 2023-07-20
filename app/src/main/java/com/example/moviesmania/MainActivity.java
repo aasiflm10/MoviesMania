@@ -120,6 +120,16 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+        if(id == R.id.favourite_movies)
+        {
+            MyDbHandler dbHandler = new MyDbHandler(this);
+
+            ArrayList<Movie> favouiteMovies = dbHandler.getAllMovies();
+
+            refreshList(favouiteMovies);
+            return  true;
+        }
+
 
         return super.onOptionsItemSelected(item);
     }

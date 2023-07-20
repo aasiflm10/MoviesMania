@@ -56,29 +56,44 @@ public class MovieDetailActivity extends AppCompatActivity {
             content.setText(clickedMovie.getOverview());
         }
 
-        Button markFavourite = findViewById(R.id.button_mark_as_favorite);
 
-        markFavourite.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+        Button markFavoriteButton = findViewById(R.id.button_mark_as_favorite);
+        Button removeFavouriteButton = findViewById(R.id.button_remove_from_favorites);
 
-                        Log.d("button", "fav button clicked");
-                    }
-                }
-        );
+        markFavoriteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addMovieToFavorites(clickedMovie);
+                markFavoriteButton.setVisibility(View.GONE);
+                removeFavouriteButton.setVisibility(View.VISIBLE);
+            }
+        });
+
+        removeFavouriteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                removeMovieFromFavourites(clickedMovie);
+                markFavoriteButton.setVisibility(View.VISIBLE);
+                removeFavouriteButton.setVisibility(View.GONE);
+            }
+        });
+
 
 
     }
-//
-//    public void addMovieToFavourites(Movie movie)
-//    {
-//        MyDbHandler dbHandler = new MyDbHandler(MovieDetailActivity.this);
-//        dbHandler.addMovie(movie);
-//    }
 
-    public Movie getClickedMovie()
-    {
-        return movie;
+    public void removeMovieFromFavourites(Movie movie) {
+        MyDbHandler dbHandler = new MyDbHandler(MovieDetailActivity.this);
+        dbHandler.removeMovie(movie.getId());
+        // Perform any additional actions after removing the movie, if needed.
     }
+
+
+    private void addMovieToFavorites(Movie movie) {
+        MyDbHandler dbHandler = new MyDbHandler(this);
+        dbHandler.addMovie(movie);
+        // Show a toast or perform any other action to indicate successful addition to the database
+    }
+
 }

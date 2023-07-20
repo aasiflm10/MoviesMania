@@ -15,7 +15,7 @@
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/saved_movies"
+        android:id="@+id/favourite_movies"
         android:title="Favourites"
         android:orderInCategory="1"
         app:showAsAction="never"/>

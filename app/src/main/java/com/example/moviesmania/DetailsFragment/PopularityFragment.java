@@ -42,17 +42,17 @@ public class PopularityFragment extends Fragment {
             }
         });
 
-        Button markFavourite = rootView.findViewById(R.id.button_mark_as_favorite);
-
-        markFavourite.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        Log.d("button", "fav button clicked");
-                    }
-                }
-        );
+//        Button markFavourite = rootView.findViewById(R.id.button_mark_as_favorite);
+//
+//        markFavourite.setOnClickListener(
+//                new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//
+//                        Log.d("button", "fav button clicked");
+//                    }
+//                }
+//        );
 
 
 
