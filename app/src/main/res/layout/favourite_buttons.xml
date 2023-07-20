@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/fav_button_layout"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/button_mark_as_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/red"
+        android:text="@string/mark_as_favourite"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/button_remove_from_favorites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/remove_from_favourite"
+        android:background="@color/red"
+        android:visibility="gone" />
+
+
+</LinearLayout>
